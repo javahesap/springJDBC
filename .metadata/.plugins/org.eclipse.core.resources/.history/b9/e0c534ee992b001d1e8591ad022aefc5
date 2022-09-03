@@ -9,7 +9,7 @@ import com.proje.model.Product;
 import com.proje.repostory.ProductRepostory;
 @Repository
 public class ProductRepositoryImpl implements ProductRepostory {
-    @SuppressWarnings("unused")
+
 	@Autowired
 	private DataSource datasurce;
 	public boolean save(Product product) {
@@ -26,9 +26,8 @@ public class ProductRepositoryImpl implements ProductRepostory {
 		return datasurce;
 	}
 
-	/*@Autowired // bu şekildede kullanılabilir
 	public void setDatasurce(DataSource datasurce) {
 		this.datasurce = datasurce;
 	}
-*/
+
 }
