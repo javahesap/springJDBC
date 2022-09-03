@@ -1,8 +1,14 @@
 package com.proje.repostory.impl;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +22,7 @@ public class ProductRepositoryImpl implements ProductRepostory {
     
     private JdbcTemplate jdbcTemplate;
 
-	@Override
+	@Override 
 	public boolean createProductTable() {
 		// TODO Auto-generated method stub
 		
@@ -62,6 +68,56 @@ public class ProductRepositoryImpl implements ProductRepostory {
 		
 	}
 
+
+
+	@Override
+	public boolean saveBeatch(List<Product> products) {
+
+
+		final String sorgu ="INSERT INTO product (productId, name, price, avaliable, addDate) VALUES (?,?,?,?,?)";
+		
+		
+        try {
+			
+			
+			this.jdbcTemplate.batchUpdate(sorgu, new BatchPreparedStatementSetter() {
+				
+				@Override
+				public void setValues(PreparedStatement ps, int i) throws SQLException {
+					// TODO Auto-generated method stub
+					Product product=products.get(i);
+					ps.setInt(1,product.getProductId());
+					ps.setString(2, product.getName());
+					ps.setDouble(3, product.getPrice());
+					ps.setInt(4,product.getAvalible());
+			         ps.setTimestamp(5,Timestamp.from(product.getAddDate().toInstant()));
+			   
+					
+				}
+				
+				@Override
+				public int getBatchSize() {
+					// TODO Auto-generated method stub
+					
+					products.size();
+					return 0;
+				}
+			});
+			
+		}catch(RuntimeException e) {
+			System.out.println("Hata"+e);
+			return false;
+		}
+		
+		return false;
+	}
+
+
+
+
+
+
+	
 	
 	
 }
