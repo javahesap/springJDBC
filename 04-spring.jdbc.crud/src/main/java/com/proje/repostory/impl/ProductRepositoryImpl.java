@@ -36,11 +36,32 @@ public class ProductRepositoryImpl implements ProductRepostory {
 		return false;
 	}
 	
+	
+	
+	@Override
+	public boolean save(Product product) {
+		
+		final String sorgu ="INSERT INTO product (productId, name, price, avaliable, addDate) VALUES (?,?,?,?,?)";
+		
+		
+          try {
+			
+			Object[] objects=new Object[] {product.getProductId(),product.getName(),product.getPrice(),product.getAvalible(),product.getAddDate()};
+			
+			this.jdbcTemplate.update(sorgu,objects);
+		}catch(RuntimeException e) {
+			System.out.println("Hata"+e);
+			return false;
+		}
+		return false;
+	}
 	@Autowired
 	public void setDataSource(DataSource dataSurce) {
 		
 		this.jdbcTemplate=new JdbcTemplate(dataSurce);
 		
 	}
+
+	
 	
 }

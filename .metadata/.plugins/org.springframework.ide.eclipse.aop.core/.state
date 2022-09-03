@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="04-spring.jdbc.crud"/>
 <aop-project name="spring.jdbc-dataSource"/>
 <aop-project name="03-spring.jdbc.template"/>
 <aop-project name="02-spring-jdbc.repostory"/>

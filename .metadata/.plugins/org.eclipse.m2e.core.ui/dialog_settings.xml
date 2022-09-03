@@ -44,6 +44,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="04-spring.jdbc.crud"/>
 			<item value="03-spring.jdbc.template"/>
 			<item value="02-spring-jdbc.repostory"/>
 			<item value="spring.jdbc-egitim"/>
@@ -51,6 +52,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="04-spring.jdbc.crud"/>
 			<item value="03-spring.jdbc.template"/>
 			<item value="02-spring-jdbc.repostory"/>
 			<item value="spring.jdbc-dataSource"/>

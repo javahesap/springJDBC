@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.proje.repostory.ProductRepostory;
 import com.proje.repostory.impl.ProductRepositoryImpl;
 
-public class TestXml {
+public class TestXmlcreate {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

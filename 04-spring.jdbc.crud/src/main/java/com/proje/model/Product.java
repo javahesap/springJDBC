@@ -20,6 +20,16 @@ public class Product {
 		this.avalible = avalible;
 		this.addDate = addDate;
 	}
+	
+	
+	public Product(String name, double price, int avalible, Date addDate) {
+	
+		this.productId = productId;
+		this.name = name;
+		this.price = price;
+		this.avalible = avalible;
+		this.addDate = addDate;
+	}
 	public int getProductId() {
 		return productId;
 	}
