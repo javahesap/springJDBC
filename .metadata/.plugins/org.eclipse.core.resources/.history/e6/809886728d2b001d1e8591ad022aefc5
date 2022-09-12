@@ -1,5 +1,0 @@
-package cpm.proje.config;
-@Congiguration
-public class AppConfig {
-
-}

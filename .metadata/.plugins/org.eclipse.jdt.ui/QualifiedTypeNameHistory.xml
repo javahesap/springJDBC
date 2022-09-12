@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.proje.db.Database"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.datasource.DriverManagerDataSource"/>
-    <fullyQualifiedTypeName name="com.proje.model.Product"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
@@ -10,9 +9,14 @@
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="org.springframework.context.ConfigurableApplicationContext"/>
     <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
     <fullyQualifiedTypeName name="com.proje.repostory.ProductRepostory"/>
     <fullyQualifiedTypeName name="com.proje.repostory.impl.ProductRepositoryImpl"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.proje.model.Product"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.core.BatchPreparedStatementSetter"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

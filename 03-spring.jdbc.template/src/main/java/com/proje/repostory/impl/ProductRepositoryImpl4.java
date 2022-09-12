@@ -14,7 +14,7 @@ public class ProductRepositoryImpl4 implements ProductRepostory {
 	@Autowired
 	private DataSource datasurce;
     
-    private JdbcTemplate jdbcTemplate=new JdbcTemplate(datasurce);
+    private JdbcTemplate jdbcTemplate;
 	public boolean save(Product product) {
 		// TODO Auto-generated method stub
 		

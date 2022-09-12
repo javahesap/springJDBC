@@ -1,5 +1,0 @@
-package cpm.proje.repostory;
-
-public interface ProductRepostory {
-
-}
