@@ -26,7 +26,7 @@ public class ProductRepositoryImpl implements ProductRepostory {
 	public boolean createProductTable() {
 		// TODO Auto-generated method stub
 		
-		String query="Create Table product(productId INT NOT NULL, name VARCHAR(20) ,price DOUBLE,avaliable INT ,"
+	final	String query="Create Table product(productId INT NOT NULL AUTO_INCREMENT, name VARCHAR(20) ,price DOUBLE,avaliable INT ,"
 				+ "addDate DATETIME,PRIMARY KEY(productId))";
 		this.jdbcTemplate.execute(query);
 		

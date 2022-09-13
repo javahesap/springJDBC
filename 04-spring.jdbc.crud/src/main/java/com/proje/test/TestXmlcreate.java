@@ -13,7 +13,7 @@ public class TestXmlcreate {
 		
 		
 		ConfigurableApplicationContext applicationContext =new ClassPathXmlApplicationContext("applicationContetxt.xml");
-		
+		//dikkat implement clasını ilk harfi küçükolmak zorunda
 		ProductRepostory productRepository=applicationContext.getBean("productRepositoryImpl",ProductRepositoryImpl.class);
 		productRepository.createProductTable();
 		
