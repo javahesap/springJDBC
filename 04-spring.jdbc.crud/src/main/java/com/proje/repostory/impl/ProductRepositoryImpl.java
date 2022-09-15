@@ -17,6 +17,7 @@ import org.springframework.stereotype.Repository;
 
 import com.proje.model.Product;
 import com.proje.repostory.ProductRepostory;
+import com.proje.rowMapper.ProductRowMapper;
 @Repository
 public class ProductRepositoryImpl implements ProductRepostory {
     @SuppressWarnings("unused")
@@ -129,7 +130,7 @@ public Product finById(int id) {
 	
 	try {
 		
-		
+		/*
 		product=this.jdbcTemplate.queryForObject(sorgu, new Object[] {id}, new RowMapper<Product>(){
 			
 			
@@ -146,27 +147,40 @@ public Product finById(int id) {
 			}
 		});
 	
-		
-		
+		*/
+		product=this.jdbcTemplate.queryForObject(sorgu, new Object[] {id}, new ProductRowMapper());
 	
 	} catch (Exception e) {
-		// TODO: handle exception
+		// TODO: handle exception 
 		System.out.println("Hata"+e);
 		
 	}
 	
-	
-	
-	
-	
+
+
 	
 	return product;
 }
 
 @Override
 public List<Product> findProducts() {
+	String sorgu="select * from product";
+	List<Product> products=null;
+	
+	
+	try {
+		
+		
+		products=this.jdbcTemplate.query(sorgu, new ProductRowMapper());
+		
+	} catch (Exception e) {
+		// TODO: handle exception
+		System.out.println("Hata"+e);
+	}
+	
+	
 	// TODO Auto-generated method stub
-	return null;
+	return 		products;
 }
 
 	
