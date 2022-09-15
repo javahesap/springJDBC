@@ -14,9 +14,13 @@
     <fullyQualifiedTypeName name="com.proje.repostory.ProductRepostory"/>
     <fullyQualifiedTypeName name="com.proje.repostory.impl.ProductRepositoryImpl"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="com.proje.model.Product"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.BatchPreparedStatementSetter"/>
     <fullyQualifiedTypeName name="java.sql.Timestamp"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
+    <fullyQualifiedTypeName name="com.proje.rowMapper.ProductRowMapper"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.core.PreparedStatementSetter"/>
+    <fullyQualifiedTypeName name="com.proje.model.Product"/>
 </qualifiedTypeNameHistroy>

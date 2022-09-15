@@ -12,4 +12,5 @@ public interface ProductRepostory {
 	boolean saveBeatch(List<Product> products);
 	Product finById(int id);
 	List<Product> findProducts();
+	boolean update(Product product);
 }

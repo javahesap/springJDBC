@@ -12,6 +12,7 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
@@ -181,6 +182,50 @@ public List<Product> findProducts() {
 	
 	// TODO Auto-generated method stub
 	return 		products;
+}
+
+
+
+@Override
+public boolean update(Product product) {
+	// TODO Auto-generated method stub
+	
+	
+	String sorgu="UPDATE product SET name=?, price=? , avaliable =? where productId=?";
+	
+	try {
+		
+		/*this.jdbcTemplate.update(sorgu, new PreparedStatementSetter() {
+
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException {
+				// TODO Auto-generated method stub
+				
+				ps.setString(1, product.getName());
+				ps.setDouble(2, product.getPrice());
+				ps.setInt(3, product.getAvalible());
+				ps.setInt(4, product.getProductId());
+				
+				
+			}
+			
+			
+			
+		});
+		
+		*/
+		this.jdbcTemplate.update(sorgu, new Object[] {product.getName(),product.getPrice(), product.getAvalible(),product.getProductId()});
+		
+	} catch (Exception e) {
+		// TODO: handle exception
+		
+		System.out.println("Hata"+e);
+		
+		return false;
+	}	
+	
+	
+	return true;
 }
 
 	
