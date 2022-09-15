@@ -60,6 +60,11 @@ public class Product {
 	public void setAddDate(Date addDate) {
 		this.addDate = addDate;
 	}
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", name=" + name + ", price=" + price + ", avalible=" + avalible
+				+ ", addDate=" + addDate + "]";
+	}
 	
 	
 	

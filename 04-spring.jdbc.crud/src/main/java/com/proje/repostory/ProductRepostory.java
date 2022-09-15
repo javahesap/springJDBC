@@ -10,4 +10,6 @@ public interface ProductRepostory {
 	boolean save(Product product);
 	
 	boolean saveBeatch(List<Product> products);
+	Product finById(int id);
+	List<Product> findProducts();
 }
