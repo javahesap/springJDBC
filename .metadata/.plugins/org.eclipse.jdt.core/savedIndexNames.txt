@@ -1,7 +1,0 @@
-INDEX VERSION 1.131+C:\Users\Be?ir\Desktop\SpringJDBC\.metadata\.plugins\org.eclipse.jdt.core
-360790680.index
-4108578653.index
-4031503579.index
-1999682827.index
-4142309769.index
-2328269416.index
