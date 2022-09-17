@@ -3,5 +3,6 @@
 <aop-project name="04-spring.jdbc.crud"/>
 <aop-project name="spring.jdbc-dataSource"/>
 <aop-project name="03-spring.jdbc.template"/>
+<aop-project name="05-spring-more"/>
 <aop-project name="02-spring-jdbc.repostory"/>
 </aop-reference-model>

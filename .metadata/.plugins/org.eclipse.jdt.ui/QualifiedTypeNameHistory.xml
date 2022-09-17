@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="com.proje.db.Database"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
     <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
     <fullyQualifiedTypeName name="com.proje.repostory.ProductRepostory"/>
     <fullyQualifiedTypeName name="com.proje.repostory.impl.ProductRepositoryImpl"/>
@@ -16,7 +15,6 @@
     <fullyQualifiedTypeName name="com.proje.rowMapper.ProductRowMapper"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.PreparedStatementSetter"/>
-    <fullyQualifiedTypeName name="com.proje.model.Product"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
@@ -25,4 +23,9 @@
     <fullyQualifiedTypeName name="org.springframework.context.ConfigurableApplicationContext"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
     <fullyQualifiedTypeName name="com.proje.config.AppConfig"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.core.BeanPropertyRowMapper"/>
+    <fullyQualifiedTypeName name="com.proje.repostory.ProductRepostory1"/>
+    <fullyQualifiedTypeName name="com.proje.repostory.impl.ProductRepositoryImpl1"/>
+    <fullyQualifiedTypeName name="com.proje.model.Product"/>
 </qualifiedTypeNameHistroy>

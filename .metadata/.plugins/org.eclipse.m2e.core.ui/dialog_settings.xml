@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Beşir\Desktop\SpringJDBC\04-spring.jdbc.crud"/>
 			<item value="C:\Users\Beşir\Desktop\SpringJDBC\02-spring-jdbc.repostory"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -44,6 +45,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="05-spring-more"/>
 			<item value="04-spring.jdbc.crud"/>
 			<item value="03-spring.jdbc.template"/>
 			<item value="02-spring-jdbc.repostory"/>
@@ -52,6 +54,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="05-spring-more"/>
 			<item value="04-spring.jdbc.crud"/>
 			<item value="03-spring.jdbc.template"/>
 			<item value="02-spring-jdbc.repostory"/>
