@@ -13,4 +13,5 @@ public interface ProductRepostory {
 	Product finById(int id);
 	List<Product> findProducts();
 	boolean update(Product product);
+	boolean deleteById(int id);
 }

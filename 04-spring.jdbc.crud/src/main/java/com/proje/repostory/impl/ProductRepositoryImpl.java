@@ -228,6 +228,24 @@ public boolean update(Product product) {
 	return true;
 }
 
+
+
+@Override
+public boolean deleteById(int id) {
+	// TODO Auto-generated method stub
+	
+	String sorgu="DELETE FROM product Where productId=?";
+	try {
+		this.jdbcTemplate.update(sorgu,new Object[] {id});
+	} catch (Exception e) {
+		
+		System.out.println("Hata"+e);
+		// TODO: handle exception
+	}
+	
+	return false;
+}
+
 	
 	
 	

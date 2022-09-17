@@ -10,10 +10,10 @@ import com.proje.repostory.impl.ProductRepositoryImpl;
 public class TestXmlFindById {
 	public static void main(String[] args) {
 	
-		ConfigurableApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContetxt.xml");
+	ConfigurableApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContetxt.xml");
 
-		ProductRepostory productRepository = applicationContext.getBean("productRepositoryImpl", ProductRepositoryImpl.class);
-	Product pr=productRepository.finById(5);
+	ProductRepostory productRepository = applicationContext.getBean("productRepositoryImpl", ProductRepositoryImpl.class);
+	Product pr=productRepository.finById(6);
 	System.out.println(pr);
 	}
 
