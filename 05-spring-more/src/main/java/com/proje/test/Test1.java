@@ -18,7 +18,7 @@ public class Test1 {
 		ProductRepostory1 productRepository1=applicationContext.getBean("productRepositoryImpl1",ProductRepositoryImpl1.class);
       
 	  Product product=productRepository1.finProductById(8);
-	
+	    System.out.println(product);
 	}
 
 }

@@ -11,6 +11,13 @@ public class Product {
 	private int avaliable ;
 	
 	private Date  addDate ;
+	public Product() {}
+
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", name=" + name + ", price=" + price + ", avaliable=" + avaliable
+				+ ", addDate=" + addDate + "]";
+	}
 
 	public Product(int productId, String name, double price, int avaliable, Date addDate) {
 		super();
