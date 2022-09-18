@@ -10,8 +10,11 @@ public class Product {
 	
 	private int avalible ;
 	
+	
 	private Date  addDate ;
+	
 	public Product() {}
+	
 	public Product(int productId, String name, double price, int avalible, Date addDate) {
 		super();
 		this.productId = productId;

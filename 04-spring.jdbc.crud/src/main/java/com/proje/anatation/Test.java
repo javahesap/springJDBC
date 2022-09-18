@@ -19,6 +19,7 @@ public class Test {
 		ConfigurableApplicationContext applicationcontext=new AnnotationConfigApplicationContext(AppConfig.class);
 		ProductRepostory productRepository = applicationcontext.getBean("productRepositoryImpl", ProductRepositoryImpl.class);
 		Product products=productRepository.finById(6);
+		System.out.println(products);
 
 	}
 

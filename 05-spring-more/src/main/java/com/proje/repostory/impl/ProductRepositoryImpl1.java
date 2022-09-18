@@ -12,6 +12,9 @@ import com.proje.repostory.ProductRepostory1;
 @Repository
 public  class ProductRepositoryImpl1  implements ProductRepostory1{
 	private JdbcTemplate jdbcTemplate;	
+	
+	
+	public void ProductRepositoryImpl1() {}
 	@Autowired
 	public void setDataSource(DataSource dataSurce) {
 		
@@ -48,7 +51,7 @@ public  class ProductRepositoryImpl1  implements ProductRepostory1{
 			product=this.jdbcTemplate.queryForObject(sorgu,  new Object[] {id}, new BeanPropertyRowMapper<>(Product.class));			
 			
 		} catch (Exception e) {
-			System.out.println("Hata"+e);
+			System.out.println("Hata:  "+e);
 			// TODO: handle exception		}				
 	}		
 		return product;
