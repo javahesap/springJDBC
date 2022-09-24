@@ -6,12 +6,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import com.proje.repostory.impl.PersonelRepostoryImpl;
-import com.proje.repostory.PersonelRepostory;
 
 @Configuration
 @ComponentScan("com.proje")
 public class AppConfig {
+	
+	
 	
 	@Bean
 	public DataSource dataSource() {
@@ -25,13 +25,5 @@ public class AppConfig {
 	  
 	  return databasesurce;
 	}
-	@Bean
-	
-	public PersonelRepostory personelRepostory() {
-		
-		PersonelRepostoryImpl personelrepostoryImpl=new PersonelRepostoryImpl();
-		
-		personelrepostoryImpl.setDataSource(this.dataSource());
-		return personelrepostoryImpl;
-	}
+
 }
