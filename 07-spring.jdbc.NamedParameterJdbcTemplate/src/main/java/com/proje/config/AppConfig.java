@@ -11,7 +11,9 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 @ComponentScan("com.proje")
 public class AppConfig {
 	
-/*	@Bean
+	
+	 
+	@Bean
 	public DataSource dataSource() {
 	
 	  DriverManagerDataSource databasesurce=new DriverManagerDataSource();
@@ -23,13 +25,5 @@ public class AppConfig {
 	  
 	  return databasesurce;
 	}
-	@Bean
-	
-	public PersonelRepostory personelRepostory() {
-		
-		PersonelRepostoryImpl personelrepostoryImpl=new PersonelRepostoryImpl();
-		
-		personelrepostoryImpl.setDataSource(this.dataSource());
-		return personelrepostoryImpl;
-	}*/
+
 }
