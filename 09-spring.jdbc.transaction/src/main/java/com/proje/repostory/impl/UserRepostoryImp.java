@@ -1,25 +1,26 @@
 package com.proje.repostory.impl;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
-
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
-
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.proje.model.User;
 import com.proje.model.UserDetail;
 import com.proje.repostory.UserRepostory;
 
 import com.proje.rowmapper.UserRowMapper;
-
+@Transactional
 public class UserRepostoryImp  extends NamedParameterJdbcDaoSupport implements UserRepostory{
-
+	@Override
+	@Transactional(isolation=Isolation.READ_COMMITTED, propagation =Propagation.REQUIRED , timeout = 3, rollbackFor =RuntimeException.class)
 	public boolean Save(User user) {
 		// TODO Auto-generated method stub
 		
@@ -69,9 +70,47 @@ public class UserRepostoryImp  extends NamedParameterJdbcDaoSupport implements U
 
 	public boolean deleteById(int id) {
 		// TODO Auto-generated method stub
+		
+		
+		
+		String queryDinderUser="select * from user where userId=:userId";
+		String queryDeleteUser="delete from user where userId=:userId";
+		String queryDeleteuserDetail="delete * from userdetail where userDetailId=:userDetailId";
+		  
+		
+		try {
+			SqlParameterSource sourceFinUser=new MapSqlParameterSource("userId",id);
+		Integer userDetailId=	this.getNamedParameterJdbcTemplate().query(queryDinderUser, sourceFinUser,new ResultSetExtractor<Integer>() {
+
+				public Integer extractData(ResultSet rs) throws SQLException, DataAccessException {
+					// TODO Auto-generated method stub
+					
+					Integer userDetailId=rs.getInt("userDetailId");
+					return userDetailId;
+				}
+				
+				
+				
+			});
+			
+		SqlParameterSource sourceDeleteUser=new MapSqlParameterSource("userId",id);
+		this.getNamedParameterJdbcTemplate().update(queryDeleteUser, sourceDeleteUser);
+		
+		SqlParameterSource sourceDeleteUserdetail=new MapSqlParameterSource("userDetailId",userDetailId.intValue());
+		this.getNamedParameterJdbcTemplate().update(queryDeleteuserDetail, sourceDeleteUserdetail);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		
+		
+		
+		
 		return false;
 	}
-
+	@Transactional(readOnly=true)
 	public User findById(int id) {
 		// TODO Auto-generated method stub
 		
@@ -98,7 +137,7 @@ public class UserRepostoryImp  extends NamedParameterJdbcDaoSupport implements U
 
 		
 	}
-
+	@Transactional(readOnly=true)
 	public User findWidthUserDetailById(int id) {
 		// TODO Auto-generated method stub
 		
@@ -138,9 +177,7 @@ public class UserRepostoryImp  extends NamedParameterJdbcDaoSupport implements U
 				
 			});
 			
-			
-			
-			
+
 			
 		} catch (RuntimeException e) {
 			// TODO: handle exception
@@ -156,18 +193,12 @@ public class UserRepostoryImp  extends NamedParameterJdbcDaoSupport implements U
 
 	public List<User> findUsers() {
 		// TODO Auto-generated method stub
-		
-		
-		
-		
+
 		String sorgu = "SELECT *  FROM user ";
 
 		List<User> user = null;
 
 		try {
-
-	
-			
 
 			this.getNamedParameterJdbcTemplate().query(sorgu, new UserRowMapper());
 		} catch (RuntimeException e) {
@@ -177,8 +208,7 @@ public class UserRepostoryImp  extends NamedParameterJdbcDaoSupport implements U
 			return null;
 
 		}
-		return user;
-		
+		return user;		
 
 	}
 
