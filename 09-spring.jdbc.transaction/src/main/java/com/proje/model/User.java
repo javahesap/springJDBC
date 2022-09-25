@@ -52,6 +52,17 @@ public class User implements Serializable{
 		this.creationDate = creationDate;
 		this.userdetail = userdetail;
 	}
+	
+	
+	public User(int userId, String username, String password, Date creationDate) {
+		super();
+		this.userId = userId;
+		this.username = username;
+		this.password = password;
+		this.creationDate = creationDate;
+		
+	}
+	
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", creationDate="

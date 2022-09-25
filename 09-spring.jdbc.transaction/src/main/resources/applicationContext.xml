@@ -21,13 +21,13 @@
     <property name="password" value="" />
 </bean>
 
-<bean id="userRepository"   class="com.proje.repostory.UserDetailRepostory.UserRepostoryImp">
+<bean id="userRepostory"   class="com.proje.repostory.UserDetailRepostory.UserRepostoryImp">
 <property name="dataSource" ref="dataSource"></property>
 
 </bean>
 
 
-<bean id="userRepository"   class="com.proje.repostory.UserDetailRepostory.UserDetailRepostoryImpl">
+<bean id="userdetailRepository"   class="com.proje.repostory.UserDetailRepostory.UserDetailRepostoryImpl">
 <property name="dataSource" ref="dataSource"></property>
 
 </bean>
