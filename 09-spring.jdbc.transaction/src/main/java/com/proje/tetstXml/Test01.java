@@ -22,7 +22,7 @@ public class Test01 {
 	
 		UserService userService =applicationContext.getBean("userServiceIpl",UserServiceIpl.class);
 		
-		User user= new User(100 ,"beşir", "123456",new Date());
+		User user= new User(5 ,"besir", "123456",new Date());
 
 		
 		userService.Save(user);

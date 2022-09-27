@@ -28,7 +28,7 @@ public class UserRepostoryImp  extends NamedParameterJdbcDaoSupport implements U
 		
 		
 		try {
-			SqlParameterSource source=new MapSqlParameterSource("personelId",user.getUserId())
+			SqlParameterSource source=new MapSqlParameterSource("userId",user.getUserId())
 					.addValue("userName", user.getUsername())
 					.addValue("password", user.getPassword())
 					.addValue("creationDate", user.getCreationDate());

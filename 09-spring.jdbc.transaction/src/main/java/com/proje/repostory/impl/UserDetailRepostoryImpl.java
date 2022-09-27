@@ -24,7 +24,7 @@ public class UserDetailRepostoryImpl extends NamedParameterJdbcDaoSupport implem
 		
 		
 		String querySaveUserDetail="INSERT INTO  userdetail(userDetailId, firstName, lastName, birtOfDate) values(:userDetailId, :firstName, :lastName, :birtOfDate)";
-		String queryUpdateUser="update user SET userDetailId=:userDetailId where userId:userId";
+		String queryUpdateUser="update user SET userdetailId  =:userdetailId   where userId=:userId";
 		
 		
 		
@@ -36,8 +36,8 @@ public class UserDetailRepostoryImpl extends NamedParameterJdbcDaoSupport implem
 					
 			this.getNamedParameterJdbcTemplate().update(querySaveUserDetail, source);
 			
-			
-			SqlParameterSource sourceupdateser=new MapSqlParameterSource("userDetailId",userdetail.getUserDetailId());
+			System.out.println(userdetail.getUserDetailId());
+			SqlParameterSource sourceupdateser=new MapSqlParameterSource("userId",userId).addValue("userdetailId", userdetail.getUserDetailId());
 			this.getNamedParameterJdbcTemplate().update(queryUpdateUser, sourceupdateser);
 			
 					

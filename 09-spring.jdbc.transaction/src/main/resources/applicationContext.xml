@@ -21,19 +21,19 @@
     <property name="password" value="" />
 </bean>
 
-<bean id="userRepostory"   class="com.proje.repostory.UserDetailRepostory.UserRepostoryImp">
+<bean id="userRepostory"   class="com.proje.repostory.impl.UserRepostoryImp">
 <property name="dataSource" ref="dataSource"></property>
 
 </bean>
 
 
-<bean id="userdetailRepository"   class="com.proje.repostory.UserDetailRepostory.UserDetailRepostoryImpl">
+<bean id="userdetailRepository"   class="com.proje.repostory.impl.UserDetailRepostoryImpl">
 <property name="dataSource" ref="dataSource"></property>
 
 </bean>
 
 
-<bean id="transactionManager"   class="org.springframework.jdbc.datasource.dataSourceTransactionManager">
+<bean id="transactionManager"   class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 <property name="dataSource" ref="dataSource"></property>
 
 </bean>
